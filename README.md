@@ -26,7 +26,7 @@ The dataset contains sentences labeled with multiple emotions:
 Each sentence can have **more than one emotion** assigned.
 ---
 
-## Getting started
+## 🚀 Getting started
 
 1. Create a virtual environment
    ```
