@@ -1,7 +1,7 @@
 import os
 import joblib
 import pandas as pd
-from preprocess import preprocess_text  # assuming you have a function for cleaning text
+from preprocess import preprocess_text  
 
 def load_models():
     base_dir = os.path.join(os.path.dirname(__file__), "..", "models")
