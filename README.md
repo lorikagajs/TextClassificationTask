@@ -23,8 +23,31 @@ The dataset contains sentences labeled with multiple emotions:
 - `surprise`
 
 Each sentence can have **more than one emotion** assigned.
-
 ---
+
+## Getting started
+
+1. Create a virtual environment
+   ```
+   python -m venv venv
+   ```
+2. Activate the environmentt
+   ```
+   venv\Scripts\activate.bat
+   ```
+3. Install dependencies
+   ```
+   pip install -r requirements.txt
+4. Excecute files
+   ```
+   python src/train.py
+   ```
+
+   
+
+
+
+
 
 
 
