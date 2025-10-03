@@ -39,7 +39,7 @@ Each sentence can have **more than one emotion** assigned.
 3. Install dependencies
    ```
    pip install -r requirements.txt
-4. Excecute files
+4. Excecute files 
    ```
    python src/train.py
    ```
