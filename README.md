@@ -13,6 +13,7 @@ The models used are:
 The dataset used in this project is taken from the following paper:
 
 > SemEval-2025 Task 11: Bridging the Gap in Text-Based Emotion Detection (Muhammad et al. 2025)
+
 > Dataset link: https://brighter-dataset.github.io/
 
 The dataset contains sentences labeled with multiple emotions:  
