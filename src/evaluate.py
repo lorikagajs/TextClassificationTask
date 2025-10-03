@@ -1,4 +1,3 @@
-# evaluate.py
 import joblib
 from preprocess import load_data, prepare_data, vectorize_text
 from sklearn.metrics import classification_report

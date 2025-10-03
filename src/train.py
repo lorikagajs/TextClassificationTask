@@ -9,17 +9,13 @@ from preprocess import load_data, prepare_data, vectorize_text
 
 
 def train_and_evaluate(X_train_vec, X_test_vec, y_train, y_test, vectorizer):
-    """
-    Train multi-label classifiers (Logistic Regression & Naive Bayes),
-    evaluate them, and save models + vectorizer.
-    """
 
-    # --- Ensure models folder exists ---
+
     save_dir = os.path.join(os.path.dirname(__file__), "..", "models")
     os.makedirs(save_dir, exist_ok=True)
     print("Saving models to:", os.path.abspath(save_dir))
 
-    # --- Logistic Regression wrapped in One-vs-Rest ---
+    # Logistic Regression wrapped in One-vs-Rest
     log_reg = OneVsRestClassifier(LogisticRegression(max_iter=1000))
     log_reg.fit(X_train_vec, y_train)
     y_pred_log = log_reg.predict(X_test_vec)
@@ -30,7 +26,7 @@ def train_and_evaluate(X_train_vec, X_test_vec, y_train, y_test, vectorizer):
     joblib.dump(log_reg, os.path.join(save_dir, "log_reg_model.pkl"))
     joblib.dump(vectorizer, os.path.join(save_dir, "vectorizer.pkl"))
 
-    # --- Naive Bayes wrapped in One-vs-Rest ---
+    # Naive Bayes wrapped in One-vs-Rest 
     nb = OneVsRestClassifier(MultinomialNB())
     nb.fit(X_train_vec, y_train)
     y_pred_nb = nb.predict(X_test_vec)

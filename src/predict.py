@@ -4,7 +4,6 @@ import pandas as pd
 from preprocess import preprocess_text  # assuming you have a function for cleaning text
 
 def load_models():
-    """Load trained models and vectorizer from models folder."""
     base_dir = os.path.join(os.path.dirname(__file__), "..", "models")
     log_reg = joblib.load(os.path.join(base_dir, "log_reg_model.pkl"))
     nb = joblib.load(os.path.join(base_dir, "naive_bayes_model.pkl"))
@@ -12,10 +11,7 @@ def load_models():
     return log_reg, nb, vectorizer
 
 def predict_emotions(model, vectorizer, text):
-    """
-    Predict emotions for a single text input.
-    Returns a dictionary {emotion: 0/1}.
-    """
+  
     # Preprocess the input text (same as training)
     cleaned_text = preprocess_text(text)
     
